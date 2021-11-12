@@ -1,3 +1,4 @@
+import 'package:auth_app/presentation/widgets/button.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatelessWidget {
@@ -14,6 +15,24 @@ class FirstPage extends StatelessWidget {
             child: Image.asset(
               'lib/presentation/images/background_image.jpg',
               fit: BoxFit.fill,
+            ),
+          ),
+          Positioned(
+            top: 600,
+            left: 10,
+            right: 10,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                ButtonWidget(
+                  text: 'Sign in',
+                  onClicked: () {},
+                ),
+                ButtonWidget(
+                  text: 'Sign up',
+                  onClicked: () {},
+                )
+              ],
             ),
           ),
         ],
