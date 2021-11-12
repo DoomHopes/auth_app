@@ -1,4 +1,4 @@
-import 'package:auth_app/presentation/first_page.dart';
+import 'package:auth_app/presentation/pages/first_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
