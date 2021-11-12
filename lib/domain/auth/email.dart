@@ -1,10 +1,15 @@
+import 'package:auth_app/domain/core/failures.dart';
+import 'package:dartz/dartz.dart';
+import 'package:flutter/foundation.dart';
+
+@immutable
 class EmailAddress {
-  final String value;
+  final Either<ValueFailure<String>, String> value;
 
   factory EmailAddress(String input) {
     assert(input != null);
     return EmailAddress._(
-      validateEmail(input),
+      validateEmailAddress(input),
     );
   }
 
@@ -24,17 +29,12 @@ class EmailAddress {
   String toString() => 'Email(value: $value)';
 }
 
-String validateEmail(String input) {
+Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   const emailRegex =
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";
   if (RegExp(emailRegex).hasMatch(input)) {
-    return input;
+    return right(input);
   } else {
-    throw InvalidEmailException(failedValue: input);
+    return left(ValueFailure.invalidEmail(failedValue: input));
   }
-}
-
-class InvalidEmailException implements Exception {
-  final String failedValue;
-  InvalidEmailException({required this.failedValue});
 }
