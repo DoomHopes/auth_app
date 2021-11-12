@@ -8,6 +8,7 @@ class EmailAddress extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
 
   factory EmailAddress(String input) {
+    // ignore: unnecessary_null_comparison
     assert(input != null);
     return EmailAddress._(
       validateEmailAddress(input),
