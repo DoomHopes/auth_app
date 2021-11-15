@@ -844,10 +844,6 @@ abstract class _SignInWithEmailAndPassPressed implements SingInFormEvent {
 class _$SingInFormStateTearOff {
   const _$SingInFormStateTearOff();
 
-  _Initial initial() {
-    return const _Initial();
-  }
-
   _SingInFormState call(
       {required EmailAddress emailAddress,
       required Password password,
@@ -869,61 +865,15 @@ const $SingInFormState = _$SingInFormStateTearOff();
 
 /// @nodoc
 mixin _$SingInFormState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)
-        $default, {
-    required TResult Function() initial,
-  }) =>
+  EmailAddress get emailAddress => throw _privateConstructorUsedError;
+  Password get password => throw _privateConstructorUsedError;
+  bool get showErrorMessages => throw _privateConstructorUsedError;
+  bool get isSubmitting => throw _privateConstructorUsedError;
+  Option<Either<AuthFailure, Unit>> get authFailureOrSuccess =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)?
-        $default, {
-    TResult Function()? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)?
-        $default, {
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_SingInFormState value) $default, {
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_SingInFormState value)? $default, {
-    TResult Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_SingInFormState value)? $default, {
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+
+  @JsonKey(ignore: true)
+  $SingInFormStateCopyWith<SingInFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -932,6 +882,12 @@ abstract class $SingInFormStateCopyWith<$Res> {
   factory $SingInFormStateCopyWith(
           SingInFormState value, $Res Function(SingInFormState) then) =
       _$SingInFormStateCopyWithImpl<$Res>;
+  $Res call(
+      {EmailAddress emailAddress,
+      Password password,
+      bool showErrorMessages,
+      bool isSubmitting,
+      Option<Either<AuthFailure, Unit>> authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -942,133 +898,47 @@ class _$SingInFormStateCopyWithImpl<$Res>
   final SingInFormState _value;
   // ignore: unused_field
   final $Res Function(SingInFormState) _then;
+
+  @override
+  $Res call({
+    Object? emailAddress = freezed,
+    Object? password = freezed,
+    Object? showErrorMessages = freezed,
+    Object? isSubmitting = freezed,
+    Object? authFailureOrSuccess = freezed,
+  }) {
+    return _then(_value.copyWith(
+      emailAddress: emailAddress == freezed
+          ? _value.emailAddress
+          : emailAddress // ignore: cast_nullable_to_non_nullable
+              as EmailAddress,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as Password,
+      showErrorMessages: showErrorMessages == freezed
+          ? _value.showErrorMessages
+          : showErrorMessages // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isSubmitting: isSubmitting == freezed
+          ? _value.isSubmitting
+          : isSubmitting // ignore: cast_nullable_to_non_nullable
+              as bool,
+      authFailureOrSuccess: authFailureOrSuccess == freezed
+          ? _value.authFailureOrSuccess
+          : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
+              as Option<Either<AuthFailure, Unit>>,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$InitialCopyWith<$Res> {
-  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
-      __$InitialCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$SingInFormStateCopyWithImpl<$Res>
-    implements _$InitialCopyWith<$Res> {
-  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
-      : super(_value, (v) => _then(v as _Initial));
-
-  @override
-  _Initial get _value => super._value as _Initial;
-}
-
-/// @nodoc
-
-class _$_Initial implements _Initial {
-  const _$_Initial();
-
-  @override
-  String toString() {
-    return 'SingInFormState.initial()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _Initial);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)
-        $default, {
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)?
-        $default, {
-    TResult Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)?
-        $default, {
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_SingInFormState value) $default, {
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_SingInFormState value)? $default, {
-    TResult Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_SingInFormState value)? $default, {
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Initial implements SingInFormState {
-  const factory _Initial() = _$_Initial;
-}
-
-/// @nodoc
-abstract class _$SingInFormStateCopyWith<$Res> {
+abstract class _$SingInFormStateCopyWith<$Res>
+    implements $SingInFormStateCopyWith<$Res> {
   factory _$SingInFormStateCopyWith(
           _SingInFormState value, $Res Function(_SingInFormState) then) =
       __$SingInFormStateCopyWithImpl<$Res>;
+  @override
   $Res call(
       {EmailAddress emailAddress,
       Password password,
@@ -1172,89 +1042,6 @@ class _$_SingInFormState implements _SingInFormState {
   @override
   _$SingInFormStateCopyWith<_SingInFormState> get copyWith =>
       __$SingInFormStateCopyWithImpl<_SingInFormState>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)
-        $default, {
-    required TResult Function() initial,
-  }) {
-    return $default(emailAddress, password, showErrorMessages, isSubmitting,
-        authFailureOrSuccess);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)?
-        $default, {
-    TResult Function()? initial,
-  }) {
-    return $default?.call(emailAddress, password, showErrorMessages,
-        isSubmitting, authFailureOrSuccess);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>(
-    TResult Function(
-            EmailAddress emailAddress,
-            Password password,
-            bool showErrorMessages,
-            bool isSubmitting,
-            Option<Either<AuthFailure, Unit>> authFailureOrSuccess)?
-        $default, {
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(emailAddress, password, showErrorMessages, isSubmitting,
-          authFailureOrSuccess);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>(
-    TResult Function(_SingInFormState value) $default, {
-    required TResult Function(_Initial value) initial,
-  }) {
-    return $default(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(_SingInFormState value)? $default, {
-    TResult Function(_Initial value)? initial,
-  }) {
-    return $default?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>(
-    TResult Function(_SingInFormState value)? $default, {
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if ($default != null) {
-      return $default(this);
-    }
-    return orElse();
-  }
 }
 
 abstract class _SingInFormState implements SingInFormState {
@@ -1266,11 +1053,17 @@ abstract class _SingInFormState implements SingInFormState {
           required Option<Either<AuthFailure, Unit>> authFailureOrSuccess}) =
       _$_SingInFormState;
 
+  @override
   EmailAddress get emailAddress;
+  @override
   Password get password;
+  @override
   bool get showErrorMessages;
+  @override
   bool get isSubmitting;
+  @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccess;
+  @override
   @JsonKey(ignore: true)
   _$SingInFormStateCopyWith<_SingInFormState> get copyWith =>
       throw _privateConstructorUsedError;

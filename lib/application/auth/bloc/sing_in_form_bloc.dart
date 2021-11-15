@@ -9,7 +9,7 @@ part 'sing_in_form_state.dart';
 part 'sing_in_form_bloc.freezed.dart';
 
 class SingInFormBloc extends Bloc<SingInFormEvent, SingInFormState> {
-  SingInFormBloc() : super(_Initial()) {
+  SingInFormBloc() : super(SingInFormState.initial()) {
     on<SingInFormEvent>((event, emit) {
       // TODO: implement event handler
     });
