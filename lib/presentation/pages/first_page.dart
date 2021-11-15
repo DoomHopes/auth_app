@@ -27,6 +27,17 @@ class FirstPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 ButtonWidget(
+                  text: 'Sign up',
+                  onClicked: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpPage(),
+                      ),
+                    );
+                  },
+                ),
+                ButtonWidget(
                   text: 'Sign in',
                   onClicked: () {
                     Navigator.push(
@@ -37,17 +48,6 @@ class FirstPage extends StatelessWidget {
                     );
                   },
                 ),
-                ButtonWidget(
-                  text: 'Sign up',
-                  onClicked: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const SignUpPage(),
-                      ),
-                    );
-                  },
-                )
               ],
             ),
           ),
