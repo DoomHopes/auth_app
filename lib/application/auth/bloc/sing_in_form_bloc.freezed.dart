@@ -785,6 +785,10 @@ class _$SingInFormStateTearOff {
   _Initial initial() {
     return const _Initial();
   }
+
+  _SingInFormState call() {
+    return const _SingInFormState();
+  }
 }
 
 /// @nodoc
@@ -793,33 +797,39 @@ const $SingInFormState = _$SingInFormStateTearOff();
 /// @nodoc
 mixin _$SingInFormState {
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
     required TResult Function() initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object?>(
+    TResult Function(_SingInFormState value) $default, {
     required TResult Function(_Initial value) initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_SingInFormState value)? $default, {
     TResult Function(_Initial value)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SingInFormState value)? $default, {
     TResult Function(_Initial value)? initial,
     required TResult orElse(),
   }) =>
@@ -880,7 +890,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
     required TResult Function() initial,
   }) {
     return initial();
@@ -888,7 +899,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
   }) {
     return initial?.call();
@@ -896,7 +908,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
     required TResult orElse(),
   }) {
@@ -908,7 +921,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object?>(
+    TResult Function(_SingInFormState value) $default, {
     required TResult Function(_Initial value) initial,
   }) {
     return initial(this);
@@ -916,7 +930,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_SingInFormState value)? $default, {
     TResult Function(_Initial value)? initial,
   }) {
     return initial?.call(this);
@@ -924,7 +939,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SingInFormState value)? $default, {
     TResult Function(_Initial value)? initial,
     required TResult orElse(),
   }) {
@@ -937,4 +953,109 @@ class _$_Initial implements _Initial {
 
 abstract class _Initial implements SingInFormState {
   const factory _Initial() = _$_Initial;
+}
+
+/// @nodoc
+abstract class _$SingInFormStateCopyWith<$Res> {
+  factory _$SingInFormStateCopyWith(
+          _SingInFormState value, $Res Function(_SingInFormState) then) =
+      __$SingInFormStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$SingInFormStateCopyWithImpl<$Res>
+    extends _$SingInFormStateCopyWithImpl<$Res>
+    implements _$SingInFormStateCopyWith<$Res> {
+  __$SingInFormStateCopyWithImpl(
+      _SingInFormState _value, $Res Function(_SingInFormState) _then)
+      : super(_value, (v) => _then(v as _SingInFormState));
+
+  @override
+  _SingInFormState get _value => super._value as _SingInFormState;
+}
+
+/// @nodoc
+
+class _$_SingInFormState implements _SingInFormState {
+  const _$_SingInFormState();
+
+  @override
+  String toString() {
+    return 'SingInFormState()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _SingInFormState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() initial,
+  }) {
+    return $default();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? initial,
+  }) {
+    return $default?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? initial,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_SingInFormState value) $default, {
+    required TResult Function(_Initial value) initial,
+  }) {
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_SingInFormState value)? $default, {
+    TResult Function(_Initial value)? initial,
+  }) {
+    return $default?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_SingInFormState value)? $default, {
+    TResult Function(_Initial value)? initial,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SingInFormState implements SingInFormState {
+  const factory _SingInFormState() = _$_SingInFormState;
 }
