@@ -1,3 +1,5 @@
+import 'package:auth_app/presentation/pages/sign_in_page.dart';
+import 'package:auth_app/presentation/pages/sing_up_page.dart';
 import 'package:auth_app/presentation/widgets/button.dart';
 import 'package:flutter/material.dart';
 
@@ -26,11 +28,25 @@ class FirstPage extends StatelessWidget {
               children: <Widget>[
                 ButtonWidget(
                   text: 'Sign in',
-                  onClicked: () {},
+                  onClicked: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignInPage(),
+                      ),
+                    );
+                  },
                 ),
                 ButtonWidget(
                   text: 'Sign up',
-                  onClicked: () {},
+                  onClicked: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpPage(),
+                      ),
+                    );
+                  },
                 )
               ],
             ),
