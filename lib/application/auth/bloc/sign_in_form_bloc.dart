@@ -5,15 +5,15 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'sing_in_form_event.dart';
-part 'sing_in_form_state.dart';
+part 'sign_in_form_event.dart';
+part 'sign_in_form_state.dart';
 part 'sing_in_form_bloc.freezed.dart';
 
-class SingInFormBloc extends Bloc<SingInFormEvent, SingInFormState> {
+class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
 
-  SingInFormBloc(this._authFacade) : super(SingInFormState.initial()) {
-    on<SingInFormEvent>((event, emit) {
+  SignInFormBloc(this._authFacade) : super(SignInFormState.initial()) {
+    on<SignInFormEvent>((event, emit) {
       // TODO: implement event handler
     });
   }

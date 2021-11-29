@@ -2,7 +2,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'sing_in_form_bloc.dart';
+part of 'sign_in_form_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,8 +14,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$SingInFormEventTearOff {
-  const _$SingInFormEventTearOff();
+class _$SignInFormEventTearOff {
+  const _$SignInFormEventTearOff();
 
   _Started started() {
     return const _Started();
@@ -40,13 +40,21 @@ class _$SingInFormEventTearOff {
   _SignInWithEmailAndPassPressed signInWithEmailAndPassPressed() {
     return const _SignInWithEmailAndPassPressed();
   }
+
+  SignInWithGooglePressed signInWithGooglePressed() {
+    return const SignInWithGooglePressed();
+  }
+
+  SignInWithFaceBookPressed signInWithFaceBookPressed() {
+    return const SignInWithFaceBookPressed();
+  }
 }
 
 /// @nodoc
-const $SingInFormEvent = _$SingInFormEventTearOff();
+const $SignInFormEvent = _$SignInFormEventTearOff();
 
 /// @nodoc
-mixin _$SingInFormEvent {
+mixin _$SignInFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
@@ -54,6 +62,8 @@ mixin _$SingInFormEvent {
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() registerWithEmailAndPassPressed,
     required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +73,8 @@ mixin _$SingInFormEvent {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +84,8 @@ mixin _$SingInFormEvent {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -84,6 +98,10 @@ mixin _$SingInFormEvent {
         registerWithEmailAndPassPressed,
     required TResult Function(_SignInWithEmailAndPassPressed value)
         signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -95,6 +113,9 @@ mixin _$SingInFormEvent {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -106,26 +127,29 @@ mixin _$SingInFormEvent {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SingInFormEventCopyWith<$Res> {
-  factory $SingInFormEventCopyWith(
-          SingInFormEvent value, $Res Function(SingInFormEvent) then) =
-      _$SingInFormEventCopyWithImpl<$Res>;
+abstract class $SignInFormEventCopyWith<$Res> {
+  factory $SignInFormEventCopyWith(
+          SignInFormEvent value, $Res Function(SignInFormEvent) then) =
+      _$SignInFormEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SingInFormEventCopyWithImpl<$Res>
-    implements $SingInFormEventCopyWith<$Res> {
-  _$SingInFormEventCopyWithImpl(this._value, this._then);
+class _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInFormEventCopyWith<$Res> {
+  _$SignInFormEventCopyWithImpl(this._value, this._then);
 
-  final SingInFormEvent _value;
+  final SignInFormEvent _value;
   // ignore: unused_field
-  final $Res Function(SingInFormEvent) _then;
+  final $Res Function(SignInFormEvent) _then;
 }
 
 /// @nodoc
@@ -135,7 +159,7 @@ abstract class _$StartedCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$StartedCopyWithImpl<$Res> extends _$SingInFormEventCopyWithImpl<$Res>
+class __$StartedCopyWithImpl<$Res> extends _$SignInFormEventCopyWithImpl<$Res>
     implements _$StartedCopyWith<$Res> {
   __$StartedCopyWithImpl(_Started _value, $Res Function(_Started) _then)
       : super(_value, (v) => _then(v as _Started));
@@ -151,7 +175,7 @@ class _$_Started implements _Started {
 
   @override
   String toString() {
-    return 'SingInFormEvent.started()';
+    return 'SignInFormEvent.started()';
   }
 
   @override
@@ -171,6 +195,8 @@ class _$_Started implements _Started {
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() registerWithEmailAndPassPressed,
     required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
   }) {
     return started();
   }
@@ -183,6 +209,8 @@ class _$_Started implements _Started {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
   }) {
     return started?.call();
   }
@@ -195,6 +223,8 @@ class _$_Started implements _Started {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -213,6 +243,10 @@ class _$_Started implements _Started {
         registerWithEmailAndPassPressed,
     required TResult Function(_SignInWithEmailAndPassPressed value)
         signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
   }) {
     return started(this);
   }
@@ -227,6 +261,9 @@ class _$_Started implements _Started {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
   }) {
     return started?.call(this);
   }
@@ -241,6 +278,9 @@ class _$_Started implements _Started {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -250,7 +290,7 @@ class _$_Started implements _Started {
   }
 }
 
-abstract class _Started implements SingInFormEvent {
+abstract class _Started implements SignInFormEvent {
   const factory _Started() = _$_Started;
 }
 
@@ -264,7 +304,7 @@ abstract class _$EmailChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$EmailChangedCopyWithImpl<$Res>
-    extends _$SingInFormEventCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements _$EmailChangedCopyWith<$Res> {
   __$EmailChangedCopyWithImpl(
       _EmailChanged _value, $Res Function(_EmailChanged) _then)
@@ -296,7 +336,7 @@ class _$_EmailChanged implements _EmailChanged {
 
   @override
   String toString() {
-    return 'SingInFormEvent.emailChanged(emailStr: $emailStr)';
+    return 'SignInFormEvent.emailChanged(emailStr: $emailStr)';
   }
 
   @override
@@ -324,6 +364,8 @@ class _$_EmailChanged implements _EmailChanged {
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() registerWithEmailAndPassPressed,
     required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
   }) {
     return emailChanged(emailStr);
   }
@@ -336,6 +378,8 @@ class _$_EmailChanged implements _EmailChanged {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
   }) {
     return emailChanged?.call(emailStr);
   }
@@ -348,6 +392,8 @@ class _$_EmailChanged implements _EmailChanged {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -366,6 +412,10 @@ class _$_EmailChanged implements _EmailChanged {
         registerWithEmailAndPassPressed,
     required TResult Function(_SignInWithEmailAndPassPressed value)
         signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
   }) {
     return emailChanged(this);
   }
@@ -380,6 +430,9 @@ class _$_EmailChanged implements _EmailChanged {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
   }) {
     return emailChanged?.call(this);
   }
@@ -394,6 +447,9 @@ class _$_EmailChanged implements _EmailChanged {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -403,7 +459,7 @@ class _$_EmailChanged implements _EmailChanged {
   }
 }
 
-abstract class _EmailChanged implements SingInFormEvent {
+abstract class _EmailChanged implements SignInFormEvent {
   const factory _EmailChanged(String emailStr) = _$_EmailChanged;
 
   String get emailStr;
@@ -422,7 +478,7 @@ abstract class _$PasswordChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$PasswordChangedCopyWithImpl<$Res>
-    extends _$SingInFormEventCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements _$PasswordChangedCopyWith<$Res> {
   __$PasswordChangedCopyWithImpl(
       _PasswordChanged _value, $Res Function(_PasswordChanged) _then)
@@ -454,7 +510,7 @@ class _$_PasswordChanged implements _PasswordChanged {
 
   @override
   String toString() {
-    return 'SingInFormEvent.passwordChanged(passwordStr: $passwordStr)';
+    return 'SignInFormEvent.passwordChanged(passwordStr: $passwordStr)';
   }
 
   @override
@@ -482,6 +538,8 @@ class _$_PasswordChanged implements _PasswordChanged {
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() registerWithEmailAndPassPressed,
     required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
   }) {
     return passwordChanged(passwordStr);
   }
@@ -494,6 +552,8 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
   }) {
     return passwordChanged?.call(passwordStr);
   }
@@ -506,6 +566,8 @@ class _$_PasswordChanged implements _PasswordChanged {
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -524,6 +586,10 @@ class _$_PasswordChanged implements _PasswordChanged {
         registerWithEmailAndPassPressed,
     required TResult Function(_SignInWithEmailAndPassPressed value)
         signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
   }) {
     return passwordChanged(this);
   }
@@ -538,6 +604,9 @@ class _$_PasswordChanged implements _PasswordChanged {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
   }) {
     return passwordChanged?.call(this);
   }
@@ -552,6 +621,9 @@ class _$_PasswordChanged implements _PasswordChanged {
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -561,7 +633,7 @@ class _$_PasswordChanged implements _PasswordChanged {
   }
 }
 
-abstract class _PasswordChanged implements SingInFormEvent {
+abstract class _PasswordChanged implements SignInFormEvent {
   const factory _PasswordChanged(String passwordStr) = _$_PasswordChanged;
 
   String get passwordStr;
@@ -580,7 +652,7 @@ abstract class _$RegisterWithEmailAndPassPressedCopyWith<$Res> {
 
 /// @nodoc
 class __$RegisterWithEmailAndPassPressedCopyWithImpl<$Res>
-    extends _$SingInFormEventCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements _$RegisterWithEmailAndPassPressedCopyWith<$Res> {
   __$RegisterWithEmailAndPassPressedCopyWithImpl(
       _RegisterWithEmailAndPassPressed _value,
@@ -600,7 +672,7 @@ class _$_RegisterWithEmailAndPassPressed
 
   @override
   String toString() {
-    return 'SingInFormEvent.registerWithEmailAndPassPressed()';
+    return 'SignInFormEvent.registerWithEmailAndPassPressed()';
   }
 
   @override
@@ -621,6 +693,8 @@ class _$_RegisterWithEmailAndPassPressed
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() registerWithEmailAndPassPressed,
     required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
   }) {
     return registerWithEmailAndPassPressed();
   }
@@ -633,6 +707,8 @@ class _$_RegisterWithEmailAndPassPressed
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
   }) {
     return registerWithEmailAndPassPressed?.call();
   }
@@ -645,6 +721,8 @@ class _$_RegisterWithEmailAndPassPressed
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (registerWithEmailAndPassPressed != null) {
@@ -663,6 +741,10 @@ class _$_RegisterWithEmailAndPassPressed
         registerWithEmailAndPassPressed,
     required TResult Function(_SignInWithEmailAndPassPressed value)
         signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
   }) {
     return registerWithEmailAndPassPressed(this);
   }
@@ -677,6 +759,9 @@ class _$_RegisterWithEmailAndPassPressed
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
   }) {
     return registerWithEmailAndPassPressed?.call(this);
   }
@@ -691,6 +776,9 @@ class _$_RegisterWithEmailAndPassPressed
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (registerWithEmailAndPassPressed != null) {
@@ -700,7 +788,7 @@ class _$_RegisterWithEmailAndPassPressed
   }
 }
 
-abstract class _RegisterWithEmailAndPassPressed implements SingInFormEvent {
+abstract class _RegisterWithEmailAndPassPressed implements SignInFormEvent {
   const factory _RegisterWithEmailAndPassPressed() =
       _$_RegisterWithEmailAndPassPressed;
 }
@@ -715,7 +803,7 @@ abstract class _$SignInWithEmailAndPassPressedCopyWith<$Res> {
 
 /// @nodoc
 class __$SignInWithEmailAndPassPressedCopyWithImpl<$Res>
-    extends _$SingInFormEventCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
     implements _$SignInWithEmailAndPassPressedCopyWith<$Res> {
   __$SignInWithEmailAndPassPressedCopyWithImpl(
       _SignInWithEmailAndPassPressed _value,
@@ -735,7 +823,7 @@ class _$_SignInWithEmailAndPassPressed
 
   @override
   String toString() {
-    return 'SingInFormEvent.signInWithEmailAndPassPressed()';
+    return 'SignInFormEvent.signInWithEmailAndPassPressed()';
   }
 
   @override
@@ -756,6 +844,8 @@ class _$_SignInWithEmailAndPassPressed
     required TResult Function(String passwordStr) passwordChanged,
     required TResult Function() registerWithEmailAndPassPressed,
     required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
   }) {
     return signInWithEmailAndPassPressed();
   }
@@ -768,6 +858,8 @@ class _$_SignInWithEmailAndPassPressed
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
   }) {
     return signInWithEmailAndPassPressed?.call();
   }
@@ -780,6 +872,8 @@ class _$_SignInWithEmailAndPassPressed
     TResult Function(String passwordStr)? passwordChanged,
     TResult Function()? registerWithEmailAndPassPressed,
     TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPassPressed != null) {
@@ -798,6 +892,10 @@ class _$_SignInWithEmailAndPassPressed
         registerWithEmailAndPassPressed,
     required TResult Function(_SignInWithEmailAndPassPressed value)
         signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
   }) {
     return signInWithEmailAndPassPressed(this);
   }
@@ -812,6 +910,9 @@ class _$_SignInWithEmailAndPassPressed
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
   }) {
     return signInWithEmailAndPassPressed?.call(this);
   }
@@ -826,6 +927,9 @@ class _$_SignInWithEmailAndPassPressed
         registerWithEmailAndPassPressed,
     TResult Function(_SignInWithEmailAndPassPressed value)?
         signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPassPressed != null) {
@@ -835,22 +939,314 @@ class _$_SignInWithEmailAndPassPressed
   }
 }
 
-abstract class _SignInWithEmailAndPassPressed implements SingInFormEvent {
+abstract class _SignInWithEmailAndPassPressed implements SignInFormEvent {
   const factory _SignInWithEmailAndPassPressed() =
       _$_SignInWithEmailAndPassPressed;
 }
 
 /// @nodoc
-class _$SingInFormStateTearOff {
-  const _$SingInFormStateTearOff();
+abstract class $SignInWithGooglePressedCopyWith<$Res> {
+  factory $SignInWithGooglePressedCopyWith(SignInWithGooglePressed value,
+          $Res Function(SignInWithGooglePressed) then) =
+      _$SignInWithGooglePressedCopyWithImpl<$Res>;
+}
 
-  _SingInFormState call(
+/// @nodoc
+class _$SignInWithGooglePressedCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInWithGooglePressedCopyWith<$Res> {
+  _$SignInWithGooglePressedCopyWithImpl(SignInWithGooglePressed _value,
+      $Res Function(SignInWithGooglePressed) _then)
+      : super(_value, (v) => _then(v as SignInWithGooglePressed));
+
+  @override
+  SignInWithGooglePressed get _value => super._value as SignInWithGooglePressed;
+}
+
+/// @nodoc
+
+class _$SignInWithGooglePressed implements SignInWithGooglePressed {
+  const _$SignInWithGooglePressed();
+
+  @override
+  String toString() {
+    return 'SignInFormEvent.signInWithGooglePressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is SignInWithGooglePressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function() registerWithEmailAndPassPressed,
+    required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
+  }) {
+    return signInWithGooglePressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? registerWithEmailAndPassPressed,
+    TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
+  }) {
+    return signInWithGooglePressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? registerWithEmailAndPassPressed,
+    TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
+    required TResult orElse(),
+  }) {
+    if (signInWithGooglePressed != null) {
+      return signInWithGooglePressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_RegisterWithEmailAndPassPressed value)
+        registerWithEmailAndPassPressed,
+    required TResult Function(_SignInWithEmailAndPassPressed value)
+        signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
+  }) {
+    return signInWithGooglePressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_RegisterWithEmailAndPassPressed value)?
+        registerWithEmailAndPassPressed,
+    TResult Function(_SignInWithEmailAndPassPressed value)?
+        signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
+  }) {
+    return signInWithGooglePressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_RegisterWithEmailAndPassPressed value)?
+        registerWithEmailAndPassPressed,
+    TResult Function(_SignInWithEmailAndPassPressed value)?
+        signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
+    required TResult orElse(),
+  }) {
+    if (signInWithGooglePressed != null) {
+      return signInWithGooglePressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignInWithGooglePressed implements SignInFormEvent {
+  const factory SignInWithGooglePressed() = _$SignInWithGooglePressed;
+}
+
+/// @nodoc
+abstract class $SignInWithFaceBookPressedCopyWith<$Res> {
+  factory $SignInWithFaceBookPressedCopyWith(SignInWithFaceBookPressed value,
+          $Res Function(SignInWithFaceBookPressed) then) =
+      _$SignInWithFaceBookPressedCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$SignInWithFaceBookPressedCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInWithFaceBookPressedCopyWith<$Res> {
+  _$SignInWithFaceBookPressedCopyWithImpl(SignInWithFaceBookPressed _value,
+      $Res Function(SignInWithFaceBookPressed) _then)
+      : super(_value, (v) => _then(v as SignInWithFaceBookPressed));
+
+  @override
+  SignInWithFaceBookPressed get _value =>
+      super._value as SignInWithFaceBookPressed;
+}
+
+/// @nodoc
+
+class _$SignInWithFaceBookPressed implements SignInWithFaceBookPressed {
+  const _$SignInWithFaceBookPressed();
+
+  @override
+  String toString() {
+    return 'SignInFormEvent.signInWithFaceBookPressed()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SignInWithFaceBookPressed);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function() registerWithEmailAndPassPressed,
+    required TResult Function() signInWithEmailAndPassPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() signInWithFaceBookPressed,
+  }) {
+    return signInWithFaceBookPressed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? registerWithEmailAndPassPressed,
+    TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
+  }) {
+    return signInWithFaceBookPressed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? registerWithEmailAndPassPressed,
+    TResult Function()? signInWithEmailAndPassPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? signInWithFaceBookPressed,
+    required TResult orElse(),
+  }) {
+    if (signInWithFaceBookPressed != null) {
+      return signInWithFaceBookPressed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_EmailChanged value) emailChanged,
+    required TResult Function(_PasswordChanged value) passwordChanged,
+    required TResult Function(_RegisterWithEmailAndPassPressed value)
+        registerWithEmailAndPassPressed,
+    required TResult Function(_SignInWithEmailAndPassPressed value)
+        signInWithEmailAndPassPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(SignInWithFaceBookPressed value)
+        signInWithFaceBookPressed,
+  }) {
+    return signInWithFaceBookPressed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_RegisterWithEmailAndPassPressed value)?
+        registerWithEmailAndPassPressed,
+    TResult Function(_SignInWithEmailAndPassPressed value)?
+        signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
+  }) {
+    return signInWithFaceBookPressed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_EmailChanged value)? emailChanged,
+    TResult Function(_PasswordChanged value)? passwordChanged,
+    TResult Function(_RegisterWithEmailAndPassPressed value)?
+        registerWithEmailAndPassPressed,
+    TResult Function(_SignInWithEmailAndPassPressed value)?
+        signInWithEmailAndPassPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(SignInWithFaceBookPressed value)?
+        signInWithFaceBookPressed,
+    required TResult orElse(),
+  }) {
+    if (signInWithFaceBookPressed != null) {
+      return signInWithFaceBookPressed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignInWithFaceBookPressed implements SignInFormEvent {
+  const factory SignInWithFaceBookPressed() = _$SignInWithFaceBookPressed;
+}
+
+/// @nodoc
+class _$SignInFormStateTearOff {
+  const _$SignInFormStateTearOff();
+
+  _SignInFormState call(
       {required EmailAddress emailAddress,
       required Password password,
       required bool showErrorMessages,
       required bool isSubmitting,
       required Option<Either<AuthFailure, Unit>> authFailureOrSuccess}) {
-    return _SingInFormState(
+    return _SignInFormState(
       emailAddress: emailAddress,
       password: password,
       showErrorMessages: showErrorMessages,
@@ -861,10 +1257,10 @@ class _$SingInFormStateTearOff {
 }
 
 /// @nodoc
-const $SingInFormState = _$SingInFormStateTearOff();
+const $SignInFormState = _$SignInFormStateTearOff();
 
 /// @nodoc
-mixin _$SingInFormState {
+mixin _$SignInFormState {
   EmailAddress get emailAddress => throw _privateConstructorUsedError;
   Password get password => throw _privateConstructorUsedError;
   bool get showErrorMessages => throw _privateConstructorUsedError;
@@ -873,15 +1269,15 @@ mixin _$SingInFormState {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $SingInFormStateCopyWith<SingInFormState> get copyWith =>
+  $SignInFormStateCopyWith<SignInFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SingInFormStateCopyWith<$Res> {
-  factory $SingInFormStateCopyWith(
-          SingInFormState value, $Res Function(SingInFormState) then) =
-      _$SingInFormStateCopyWithImpl<$Res>;
+abstract class $SignInFormStateCopyWith<$Res> {
+  factory $SignInFormStateCopyWith(
+          SignInFormState value, $Res Function(SignInFormState) then) =
+      _$SignInFormStateCopyWithImpl<$Res>;
   $Res call(
       {EmailAddress emailAddress,
       Password password,
@@ -891,13 +1287,13 @@ abstract class $SingInFormStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SingInFormStateCopyWithImpl<$Res>
-    implements $SingInFormStateCopyWith<$Res> {
-  _$SingInFormStateCopyWithImpl(this._value, this._then);
+class _$SignInFormStateCopyWithImpl<$Res>
+    implements $SignInFormStateCopyWith<$Res> {
+  _$SignInFormStateCopyWithImpl(this._value, this._then);
 
-  final SingInFormState _value;
+  final SignInFormState _value;
   // ignore: unused_field
-  final $Res Function(SingInFormState) _then;
+  final $Res Function(SignInFormState) _then;
 
   @override
   $Res call({
@@ -933,11 +1329,11 @@ class _$SingInFormStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SingInFormStateCopyWith<$Res>
-    implements $SingInFormStateCopyWith<$Res> {
-  factory _$SingInFormStateCopyWith(
-          _SingInFormState value, $Res Function(_SingInFormState) then) =
-      __$SingInFormStateCopyWithImpl<$Res>;
+abstract class _$SignInFormStateCopyWith<$Res>
+    implements $SignInFormStateCopyWith<$Res> {
+  factory _$SignInFormStateCopyWith(
+          _SignInFormState value, $Res Function(_SignInFormState) then) =
+      __$SignInFormStateCopyWithImpl<$Res>;
   @override
   $Res call(
       {EmailAddress emailAddress,
@@ -948,15 +1344,15 @@ abstract class _$SingInFormStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SingInFormStateCopyWithImpl<$Res>
-    extends _$SingInFormStateCopyWithImpl<$Res>
-    implements _$SingInFormStateCopyWith<$Res> {
-  __$SingInFormStateCopyWithImpl(
-      _SingInFormState _value, $Res Function(_SingInFormState) _then)
-      : super(_value, (v) => _then(v as _SingInFormState));
+class __$SignInFormStateCopyWithImpl<$Res>
+    extends _$SignInFormStateCopyWithImpl<$Res>
+    implements _$SignInFormStateCopyWith<$Res> {
+  __$SignInFormStateCopyWithImpl(
+      _SignInFormState _value, $Res Function(_SignInFormState) _then)
+      : super(_value, (v) => _then(v as _SignInFormState));
 
   @override
-  _SingInFormState get _value => super._value as _SingInFormState;
+  _SignInFormState get _value => super._value as _SignInFormState;
 
   @override
   $Res call({
@@ -966,7 +1362,7 @@ class __$SingInFormStateCopyWithImpl<$Res>
     Object? isSubmitting = freezed,
     Object? authFailureOrSuccess = freezed,
   }) {
-    return _then(_SingInFormState(
+    return _then(_SignInFormState(
       emailAddress: emailAddress == freezed
           ? _value.emailAddress
           : emailAddress // ignore: cast_nullable_to_non_nullable
@@ -993,8 +1389,8 @@ class __$SingInFormStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SingInFormState implements _SingInFormState {
-  const _$_SingInFormState(
+class _$_SignInFormState implements _SignInFormState {
+  const _$_SignInFormState(
       {required this.emailAddress,
       required this.password,
       required this.showErrorMessages,
@@ -1014,14 +1410,14 @@ class _$_SingInFormState implements _SingInFormState {
 
   @override
   String toString() {
-    return 'SingInFormState(emailAddress: $emailAddress, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccess: $authFailureOrSuccess)';
+    return 'SignInFormState(emailAddress: $emailAddress, password: $password, showErrorMessages: $showErrorMessages, isSubmitting: $isSubmitting, authFailureOrSuccess: $authFailureOrSuccess)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SingInFormState &&
+            other is _SignInFormState &&
             (identical(other.emailAddress, emailAddress) ||
                 other.emailAddress == emailAddress) &&
             (identical(other.password, password) ||
@@ -1040,18 +1436,18 @@ class _$_SingInFormState implements _SingInFormState {
 
   @JsonKey(ignore: true)
   @override
-  _$SingInFormStateCopyWith<_SingInFormState> get copyWith =>
-      __$SingInFormStateCopyWithImpl<_SingInFormState>(this, _$identity);
+  _$SignInFormStateCopyWith<_SignInFormState> get copyWith =>
+      __$SignInFormStateCopyWithImpl<_SignInFormState>(this, _$identity);
 }
 
-abstract class _SingInFormState implements SingInFormState {
-  const factory _SingInFormState(
+abstract class _SignInFormState implements SignInFormState {
+  const factory _SignInFormState(
           {required EmailAddress emailAddress,
           required Password password,
           required bool showErrorMessages,
           required bool isSubmitting,
           required Option<Either<AuthFailure, Unit>> authFailureOrSuccess}) =
-      _$_SingInFormState;
+      _$_SignInFormState;
 
   @override
   EmailAddress get emailAddress;
@@ -1065,6 +1461,6 @@ abstract class _SingInFormState implements SingInFormState {
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccess;
   @override
   @JsonKey(ignore: true)
-  _$SingInFormStateCopyWith<_SingInFormState> get copyWith =>
+  _$SignInFormStateCopyWith<_SignInFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
