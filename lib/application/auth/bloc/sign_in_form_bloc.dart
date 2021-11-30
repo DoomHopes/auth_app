@@ -11,7 +11,6 @@ part 'sing_in_form_bloc.freezed.dart';
 
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
-
   SignInFormBloc(this._authFacade) : super(SignInFormState.initial()) {
     on<SignInFormEvent>((event, emit) {
       event.map(
@@ -34,7 +33,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
         },
         registerWithEmailAndPassPressed: (e) async {
           //! Register
-          Either<AuthFailure, Unit> failureOrSuccess;
+          Either<AuthFailure, Unit>? failureOrSuccess;
           final isEmailValid = state.emailAddress.isValid();
           final isPasswordValid = state.password.isValid();
 
@@ -49,14 +48,15 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
               emailAddress: state.emailAddress,
               password: state.password,
             );
-            emit(
-              state.copyWith(
-                isSubmitting: false,
-                showErrorMessages: true,
-                authFailureOrSuccess: optionOf(failureOrSuccess),
-              ),
-            );
           }
+
+          emit(
+            state.copyWith(
+              isSubmitting: false,
+              showErrorMessages: true,
+              authFailureOrSuccess: optionOf(failureOrSuccess),
+            ),
+          );
         },
         signInWithEmailAndPassPressed: (e) async {
           //! Sign-In
