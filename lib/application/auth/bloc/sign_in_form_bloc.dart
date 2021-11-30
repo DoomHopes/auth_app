@@ -14,7 +14,59 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
 
   SignInFormBloc(this._authFacade) : super(SignInFormState.initial()) {
     on<SignInFormEvent>((event, emit) {
-      // TODO: implement event handler
+      event.map(
+        started: (e) {},
+        emailChanged: (e) {
+          emit(
+            state.copyWith(
+              emailAddress: EmailAddress(e.emailStr),
+              authFailureOrSuccess: none(),
+            ),
+          );
+        },
+        passwordChanged: (e) {
+          emit(
+            state.copyWith(
+              password: Password(e.passwordStr),
+              authFailureOrSuccess: none(),
+            ),
+          );
+        },
+        registerWithEmailAndPassPressed: (e) {},
+        signInWithEmailAndPassPressed: (e) {},
+        signInWithGooglePressed: (e) async {
+          //! SignIn with Google
+          emit(
+            state.copyWith(
+              isSubmitting: true,
+              authFailureOrSuccess: none(),
+            ),
+          );
+          final failureOrSuccess = await _authFacade.signInWithGoogle();
+          emit(
+            state.copyWith(
+              isSubmitting: false,
+              authFailureOrSuccess: some(failureOrSuccess),
+            ),
+          );
+        },
+        signInWithFaceBookPressed: (e) async {
+          //! SignIn with Facebook
+          emit(
+            state.copyWith(
+              isSubmitting: true,
+              authFailureOrSuccess: none(),
+            ),
+          );
+          final failureOrSuccess = await _authFacade.signInWithFaceBook();
+          emit(
+            state.copyWith(
+              isSubmitting: false,
+              authFailureOrSuccess: some(failureOrSuccess),
+            ),
+          );
+        },
+      );
     });
   }
 }
