@@ -32,10 +32,60 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
             ),
           );
         },
-        registerWithEmailAndPassPressed: (e) {},
-        signInWithEmailAndPassPressed: (e) {},
+        registerWithEmailAndPassPressed: (e) async {
+          //! Register
+          Either<AuthFailure, Unit> failureOrSuccess;
+          final isEmailValid = state.emailAddress.isValid();
+          final isPasswordValid = state.password.isValid();
+
+          if (isEmailValid && isPasswordValid) {
+            emit(
+              state.copyWith(
+                isSubmitting: true,
+                authFailureOrSuccess: none(),
+              ),
+            );
+            failureOrSuccess = await _authFacade.registerWithEmailAndPassword(
+              emailAddress: state.emailAddress,
+              password: state.password,
+            );
+            emit(
+              state.copyWith(
+                isSubmitting: false,
+                showErrorMessages: true,
+                authFailureOrSuccess: optionOf(failureOrSuccess),
+              ),
+            );
+          }
+        },
+        signInWithEmailAndPassPressed: (e) async {
+          //! Sign-In
+          Either<AuthFailure, Unit> failureOrSuccess;
+          final isEmailValid = state.emailAddress.isValid();
+          final isPasswordValid = state.password.isValid();
+
+          if (isEmailValid && isPasswordValid) {
+            emit(
+              state.copyWith(
+                isSubmitting: true,
+                authFailureOrSuccess: none(),
+              ),
+            );
+            failureOrSuccess = await _authFacade.signInWithEmailAndPassword(
+              emailAddress: state.emailAddress,
+              password: state.password,
+            );
+            emit(
+              state.copyWith(
+                isSubmitting: false,
+                showErrorMessages: true,
+                authFailureOrSuccess: optionOf(failureOrSuccess),
+              ),
+            );
+          }
+        },
         signInWithGooglePressed: (e) async {
-          //! SignIn with Google
+          //! Sign-In with Google
           emit(
             state.copyWith(
               isSubmitting: true,
@@ -51,7 +101,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
           );
         },
         signInWithFaceBookPressed: (e) async {
-          //! SignIn with Facebook
+          //! Sign-In with Facebook
           emit(
             state.copyWith(
               isSubmitting: true,
