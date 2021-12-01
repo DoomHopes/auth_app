@@ -17,7 +17,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sing In'),
+        title: const Text('Sign-In'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,10 +38,31 @@ class _SignInPageState extends State<SignInPage> {
                   _passwordController, true),
             ],
           ),
-          ButtonWidget(
-            text: 'Sign in',
-            onClicked: () {},
-          ),
+          Column(
+            children: <Widget>[
+              ButtonWidget(
+                color: Colors.blue,
+                text: 'Sign-in',
+                onClicked: () {
+                  // todo sign-in
+                },
+              ),
+              ButtonWidget(
+                color: Colors.red,
+                text: 'Google',
+                onClicked: () {
+                  // todo sign-in with google
+                },
+              ),
+              ButtonWidget(
+                color: Colors.blueAccent,
+                text: 'Facebook',
+                onClicked: () {
+                  // todo sign-in with facebook
+                },
+              ),
+            ],
+          )
         ],
       ),
     );

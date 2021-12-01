@@ -27,7 +27,8 @@ class FirstPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 ButtonWidget(
-                  text: 'Sign up',
+                  color: Colors.blue,
+                  text: 'Sign-up',
                   onClicked: () {
                     Navigator.push(
                       context,
@@ -38,7 +39,8 @@ class FirstPage extends StatelessWidget {
                   },
                 ),
                 ButtonWidget(
-                  text: 'Sign in',
+                  color: Colors.blue,
+                  text: 'Sign-in',
                   onClicked: () {
                     Navigator.push(
                       context,

@@ -16,7 +16,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sing Up'),
+        title: const Text('Sign-up'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,6 +38,7 @@ class _SignUpPageState extends State<SignUpPage> {
             ],
           ),
           ButtonWidget(
+            color: Colors.blue,
             text: 'Register',
             onClicked: () {},
           ),
