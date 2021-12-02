@@ -2,10 +2,18 @@ import 'package:auth_app/domain/core/failures.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 
+import 'errors.dart';
+
 @immutable
 abstract class ValueObject<T> {
   const ValueObject();
   Either<ValueFailure<T>, T> get value;
+
+  /// Throw [ValueError] containing the [ValueFailure]
+  T getOrCrash() {
+    // id = identity - same as writing (right) => right
+    return value.fold((f) => throw ValueError(f), id);
+  }
 
   bool isValid() => value.isRight();
 
