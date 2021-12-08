@@ -1,4 +1,7 @@
+import 'package:auth_app/application/auth/bloc/sign_in_form_bloc.dart';
+import 'package:auth_app/injection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'widgets/button.dart';
 import 'widgets/input.dart';
@@ -15,7 +18,54 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return BlocProvider(
+      create: (context) => getIt<SignInFormBloc>(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Sign-up'),
+        ),
+        body: BlocConsumer<SignInFormBloc, SignInFormState>(
+          listener: (context, state) {
+            // todo listener
+          },
+          builder: (context, state) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                const Icon(
+                  Icons.app_registration_outlined,
+                  size: 150,
+                ),
+                Column(
+                  children: <Widget>[
+                    input(const Icon(Icons.login), 'Enter email',
+                        _emailController, false),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    input(const Icon(Icons.password), 'Enter password',
+                        _passwordController, true),
+                  ],
+                ),
+                ButtonWidget(
+                  color: Colors.blue,
+                  text: 'Register',
+                  onClicked: () {
+                    // todo register
+                  },
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+
+/*Scaffold(
       appBar: AppBar(
         title: const Text('Sign-up'),
       ),
@@ -47,6 +97,48 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
         ],
       ),
-    );
-  }
-}
+    );*/
+
+      /*BlocProvider(
+      create: (context) => getIt<SignInFormBloc>(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Sign-up'),
+        ),
+        body: BlocConsumer<SignInFormBloc, SignInFormState>(
+          listener: (context, state) {
+            // todo listener
+          },
+          builder: (context, state) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                const Icon(
+                  Icons.app_registration_outlined,
+                  size: 150,
+                ),
+                Column(
+                  children: <Widget>[
+                    input(const Icon(Icons.login), 'Enter email',
+                        _emailController, false),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    input(const Icon(Icons.password), 'Enter password',
+                        _passwordController, true),
+                  ],
+                ),
+                ButtonWidget(
+                  color: Colors.blue,
+                  text: 'Register',
+                  onClicked: () {
+                    // todo register
+                  },
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    ); */
