@@ -1,4 +1,4 @@
-import 'package:auth_app/presentation/pages/first_page.dart';
+import 'package:auth_app/presentation/auth/first_page.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {

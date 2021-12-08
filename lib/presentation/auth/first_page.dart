@@ -1,5 +1,5 @@
-import 'package:auth_app/presentation/pages/sign_in_page.dart';
-import 'package:auth_app/presentation/pages/sing_up_page.dart';
+import 'package:auth_app/presentation/auth/sign_in_page.dart';
+import 'package:auth_app/presentation/auth/sing_up_page.dart';
 import 'package:auth_app/presentation/widgets/button.dart';
 import 'package:flutter/material.dart';
 
