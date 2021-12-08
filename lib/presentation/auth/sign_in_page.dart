@@ -1,6 +1,7 @@
-import 'package:auth_app/presentation/widgets/button.dart';
-import 'package:auth_app/presentation/widgets/input.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/button.dart';
+import 'widgets/input.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);

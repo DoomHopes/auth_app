@@ -1,7 +1,8 @@
 import 'package:auth_app/presentation/auth/sign_in_page.dart';
 import 'package:auth_app/presentation/auth/sing_up_page.dart';
-import 'package:auth_app/presentation/widgets/button.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/button.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({Key? key}) : super(key: key);

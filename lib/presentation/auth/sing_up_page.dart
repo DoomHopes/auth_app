@@ -1,6 +1,7 @@
-import 'package:auth_app/presentation/widgets/button.dart';
-import 'package:auth_app/presentation/widgets/input.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/button.dart';
+import 'widgets/input.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -40,7 +41,9 @@ class _SignUpPageState extends State<SignUpPage> {
           ButtonWidget(
             color: Colors.blue,
             text: 'Register',
-            onClicked: () {},
+            onClicked: () {
+              // todo register
+            },
           ),
         ],
       ),
