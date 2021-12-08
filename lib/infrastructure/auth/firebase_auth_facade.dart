@@ -38,9 +38,23 @@ class FirebaseAuthFacade implements IAuthFacade {
 
   @override
   Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword(
-      {required EmailAddress emailAddress, required Password password}) {
-    // TODO: implement signInWithEmailAndPassword
-    throw UnimplementedError();
+      {required EmailAddress emailAddress, required Password password}) async {
+    final emailAddressStr = emailAddress.getOrCrash();
+    final passwordStr = password.getOrCrash();
+    try {
+      await _firebaseAuth.signInWithEmailAndPassword(
+        email: emailAddressStr,
+        password: passwordStr,
+      );
+      return right(unit);
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'ERROR_WRONG_PASSWORD' ||
+          e.code == 'ERROR_USER_NOT_FOUND') {
+        return left(AuthFailure.invalidEmailAndPasswordCombination());
+      } else {
+        return left(AuthFailure.serverError());
+      }
+    }
   }
 
   @override
@@ -50,9 +64,26 @@ class FirebaseAuthFacade implements IAuthFacade {
   }
 
   @override
-  Future<Either<AuthFailure, Unit>> signInWithGoogle() {
-    // TODO: implement signInWithGoogle
-    throw UnimplementedError();
+  Future<Either<AuthFailure, Unit>> signInWithGoogle() async {
+    try {
+      final googleUser = await _googleSignIn.signIn();
+      // ignore: unnecessary_null_comparison
+      if (googleUser == null) {
+        return left(AuthFailure.cancelledByUser());
+      }
+
+      final googleAuthentication = await googleUser.authentication;
+
+      final authCredential = GoogleAuthProvider.credential(
+        idToken: googleAuthentication.idToken,
+        accessToken: googleAuthentication.accessToken,
+      );
+
+      await _firebaseAuth.signInWithCredential(authCredential);
+      return right(unit);
+    } on FirebaseAuthException catch (_) {
+      return left(AuthFailure.serverError());
+    }
   }
 
   @override
