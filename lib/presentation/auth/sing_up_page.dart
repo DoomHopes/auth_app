@@ -29,24 +29,43 @@ class _SignUpPageState extends State<SignUpPage> {
             // todo listener
           },
           builder: (context, state) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            return ListView(
+              // crossAxisAlignment: CrossAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
+                SizedBox(
+                  height: 50,
+                ),
                 const Icon(
                   Icons.app_registration_outlined,
                   size: 150,
                 ),
+                SizedBox(
+                  height: 50,
+                ),
                 Column(
                   children: <Widget>[
-                    input(const Icon(Icons.login), 'Enter email',
-                        _emailController, false),
+                    input(
+                      const Icon(Icons.email),
+                      'Enter email',
+                      _emailController,
+                      false,
+                      false,
+                    ),
                     const SizedBox(
                       height: 10,
                     ),
-                    input(const Icon(Icons.password), 'Enter password',
-                        _passwordController, true),
+                    input(
+                      const Icon(Icons.password),
+                      'Enter password',
+                      _passwordController,
+                      true,
+                      false,
+                    ),
                   ],
+                ),
+                SizedBox(
+                  height: 50,
                 ),
                 ButtonWidget(
                   color: Colors.blue,

@@ -20,24 +20,31 @@ class _SignInPageState extends State<SignInPage> {
       appBar: AppBar(
         title: const Text('Sign-In'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: ListView(
         children: <Widget>[
+          SizedBox(
+            height: 50,
+          ),
           const Icon(
             Icons.login_sharp,
             size: 150,
           ),
+          SizedBox(
+            height: 50,
+          ),
           Column(
             children: <Widget>[
               input(const Icon(Icons.login), 'Enter email', _emailController,
-                  false),
+                  false, false),
               const SizedBox(
                 height: 10,
               ),
               input(const Icon(Icons.password), 'Enter password',
-                  _passwordController, true),
+                  _passwordController, true, false),
             ],
+          ),
+          SizedBox(
+            height: 50,
           ),
           Column(
             children: <Widget>[

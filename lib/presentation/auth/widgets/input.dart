@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
-Widget input(Icon icon, String hint,
-    TextEditingController textEditingController, bool obscure) {
+Widget input(
+  Icon icon,
+  String hint,
+  TextEditingController textEditingController,
+  bool obscure,
+  bool autocorrect,
+) {
   return Container(
     padding: const EdgeInsets.only(left: 20, right: 20),
     child: TextField(
       controller: textEditingController,
       obscureText: obscure,
+      autocorrect: autocorrect,
       style: const TextStyle(fontSize: 20),
       decoration: InputDecoration(
         hintStyle: const TextStyle(
